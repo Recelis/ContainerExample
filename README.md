@@ -16,3 +16,4 @@ The main point of this template is to setup these in terms of Docker containers 
 2. [ ] - Dockerise the Node App
 3. [ ] - Dockerise a Postgres db
 4. [ ] - Setup CDK ECS and Fargate
+5. [ ] - Connect to Aurora Serverless v2
