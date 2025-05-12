@@ -1,8 +1,18 @@
-# AWS Lambda Example
+# AWS Container Example
 
 Backend:
-A Typescript express web server which allows you to run locally and deployed on AWS with Lambdas
+A Typescript node web server.
 
-This is a project for deploying an express server on an AWS Lambda.
+Frontend:
+React
 
-Eventually, I hope that it becomes an easy template to fork a new web project off. I have previously been setting everything up on a DigitalOcean droplet, but having to configure the ufw firewall and nginx server to allow multiple domains was/is a bit cumbersome. So I hope that this becomes the new way forward.
+This public template will be for a simple text summarizer error checker for a Github repo.
+
+The main point of this template is to setup these in terms of Docker containers and spin up an AWS ECS with AWS Fargate. It isn't very intelligent so it will check through the entire codebase each time instead of viewing the diffs.
+
+## Plan
+
+1. [x] - Dockerise a React app
+2. [ ] - Dockerise the Node App
+3. [ ] - Dockerise a Postgres db
+4. [ ] - Setup CDK ECS and Fargate
