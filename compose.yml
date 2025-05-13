@@ -1,8 +1,8 @@
 services:
-  web:
+  app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./app/Dockerfile
     ports:
       - "3000:3000"
     environment:
@@ -10,3 +10,14 @@ services:
     stdin_open: true
     tty: true
     command: yarn dev
+  api:
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      NODE_ENV: development
+    stdin_open: true
+    tty: true
+    command: yarn run start

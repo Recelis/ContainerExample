@@ -13,7 +13,8 @@ The main point of this template is to setup these in terms of Docker containers 
 ## Plan
 
 1. [x] - Dockerise a React app
-2. [ ] - Dockerise the Node App
+2. [x] - Dockerise the Node App
 3. [ ] - Dockerise a Postgres db
-4. [ ] - Setup CDK ECS and Fargate
-5. [ ] - Connect to Aurora Serverless v2
+4. [ ] - Multistage builds for dev and prod
+5. [ ] - Setup CDK ECS and Fargate
+6. [ ] - Connect to Aurora Serverless v2
