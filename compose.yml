@@ -21,3 +21,17 @@ services:
     stdin_open: true
     tty: true
     command: yarn run start
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    profiles:
+      - dev
+    depends_on: [api]
+volumes:
+  postgres:
