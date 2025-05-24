@@ -1,14 +1,18 @@
-ARG ENV=prod
-
-FROM node:18-alpine
+FROM node:24-alpine AS dev
 
 WORKDIR /api
-COPY ./api/package*.json ./
+COPY ./package.json .
 
 RUN yarn install
 
-COPY ./api ./
+COPY . .
 
+CMD ["yarn", "dev"]
+
+
+FROM dev AS build
 RUN yarn run build
+
+FROM build AS prod
 
 CMD ["yarn", "start"]
