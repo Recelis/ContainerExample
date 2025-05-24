@@ -10,6 +10,8 @@ This public template will be for a simple text summarizer error checker for a Gi
 
 The main point of this template is to setup these in terms of Docker containers and spin up an AWS ECS with AWS Fargate. It isn't very intelligent so it will check through the entire codebase each time instead of viewing the diffs.
 
+See the `Makefile` for commands on running, building and stopping the containers.
+
 ## Plan
 
 1. [x] - Dockerise a React app
