@@ -7,6 +7,9 @@ RUN yarn install
 
 COPY . .
 
+# Prisma must be generated before it can be used.
+RUN  npx prisma generate
+
 CMD ["yarn", "dev"]
 
 

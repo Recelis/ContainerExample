@@ -1,12 +1,13 @@
 {
   "name": "express_server",
   "version": "1.0.0",
-  "description": "This Node Express Server serves Stating Golf.",
-  "main": "src/index.local.js",
+  "description": "This Node Express Server serves ContainerExample.",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "dev": "nodemon index.ts",
+    "seed": "ts-node prisma/seed.ts",
+    "dev": "npx prisma migrate deploy && nodemon index.ts",
     "start": "node build/src/index.js"
   },
   "author": "",
@@ -14,11 +15,14 @@
   "dependencies": {
     "@codegenie/serverless-express": "^4.14.0",
     "@prisma/client": "^6.8.2",
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.18",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.14",

@@ -2,6 +2,7 @@
 
 Backend:
 A Typescript node web server.
+Database uses Postgres with Prisma as an ORM.
 
 Frontend:
 React
@@ -12,13 +13,22 @@ The main point of this template is to setup these in terms of Docker containers 
 
 See the `Makefile` for commands on running, building and stopping the containers.
 
+## Seeding
+
+When running in development, a seed script is run. You can call `make dev-prisma-seed` to add Bobby Hasd as a user to your dev Postgres and then call `make psql` to check that the user has been added.
+
+```SQL
+SELECT * FROM "Profile"; -- Profile needs to start with a capital letter with Double Quotation marks. Also remember to end with a semicolon;
+```
+
 ## Plan
 
 1. [x] - Dockerise a React app
 2. [x] - Dockerise the Node App
 3. [x] - Dockerise a Postgres db
 4. [x] - Integrate with Prisma
-5. [ ] - Setup simple authentication
-6. [ ] - Multistage builds for dev and prod
-7. [ ] - Setup CDK ECS and Fargate
-8. [ ] - Connect to Aurora Serverless v2
+5. [x] - Seeding with dummy user Bob Hasd
+6. [ ] - Setup simple authentication
+7. [ ] - Multistage builds for dev and prod
+8. [ ] - Setup CDK ECS and Fargate
+9. [ ] - Connect to Aurora Serverless v2

@@ -14,6 +14,12 @@ dev-prisma-migrate:
 dev-prisma-reset:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm api npx prisma migrate reset
 
+dev-prisma-seed:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm api yarn run seed
+
+psql:
+	docker exec -it local-postgres psql -U user containerexample
+
 # Prod commands
 prod-build:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml build

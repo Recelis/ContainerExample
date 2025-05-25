@@ -10,7 +10,7 @@ datasource db {
 
 model Profile {
     id              String   @id @db.Uuid
-    email           String
+    email           String   @unique
     hashed_password String
     first_name      String?
     last_name       String?
