@@ -17,7 +17,8 @@ See the `Makefile` for commands on running, building and stopping the containers
 1. [x] - Dockerise a React app
 2. [x] - Dockerise the Node App
 3. [x] - Dockerise a Postgres db
-4. [ ] - Integrate with Better Auth
-5. [ ] - Multistage builds for dev and prod
-6. [ ] - Setup CDK ECS and Fargate
-7. [ ] - Connect to Aurora Serverless v2
+4. [x] - Integrate with Prisma
+5. [ ] - Setup simple authentication
+6. [ ] - Multistage builds for dev and prod
+7. [ ] - Setup CDK ECS and Fargate
+8. [ ] - Connect to Aurora Serverless v2

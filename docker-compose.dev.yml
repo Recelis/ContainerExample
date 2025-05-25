@@ -29,6 +29,7 @@ services:
       target: dev
     environment:
       NODE_ENV: development
+      DATABASE_URL: postgresql://user:password@local-postgres:5432/containerexample
     volumes:
       - ./api:/api
       - /api/node_modules

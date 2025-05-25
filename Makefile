@@ -8,6 +8,12 @@ dev-up:
 dev-down:
 	docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
 
+dev-prisma-migrate:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm api npx prisma migrate dev
+
+dev-prisma-reset:
+	docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm api npx prisma migrate reset
+
 # Prod commands
 prod-build:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
