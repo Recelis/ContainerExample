@@ -9,10 +9,10 @@ datasource db {
 }
 
 model Profile {
-    id              String   @id @db.Uuid
-    email           String   @unique
-    hashed_password String
-    first_name      String?
-    last_name       String?
-    createdAt       DateTime @default(now()) @db.Timestamp(6)
+    id             String   @id @db.Uuid
+    email          String   @unique
+    hashedPassword String   @map("hashed_password")
+    firstName      String?  @map("first_name")
+    lastName       String?  @map("last_name")
+    createdAt      DateTime @default(now()) @db.Timestamp(6)
 }

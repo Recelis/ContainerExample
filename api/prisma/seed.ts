@@ -13,7 +13,7 @@ async function seed() {
       create: {
         id,
         email: "bobbyhasd@gmail.com",
-        hashed_password: hashedPassword,
+        hashedPassword,
       },
     });
     console.log("Database seeded!");
