@@ -28,7 +28,8 @@ SELECT * FROM "Profile"; -- Profile needs to start with a capital letter with Do
 3. [x] - Dockerise a Postgres db
 4. [x] - Integrate with Prisma
 5. [x] - Seeding with dummy user Bob Hasd
-6. [ ] - Setup simple authentication
-7. [ ] - Multistage builds for dev and prod
-8. [ ] - Setup CDK ECS and Fargate
+6. [x] - Setup simple authentication
+7. [x] - Multistage builds for dev and prod
+8. [x] - Setup CDK ECS and Fargate
 9. [ ] - Connect to Aurora Serverless v2
+10. [ ] - Run seed script in Aurora on deploy/initialise
