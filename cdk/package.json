@@ -1,9 +1,6 @@
 {
-  "name": "golfappbackend",
+  "name": "container-example",
   "version": "0.1.0",
-  "bin": {
-    "golfappbackend": "bin/golfappbackend.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",

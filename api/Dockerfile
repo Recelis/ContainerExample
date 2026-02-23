@@ -1,4 +1,6 @@
-FROM node:24-alpine AS dev
+FROM node:20-alpine AS dev
+
+RUN apk add --no-cache openssl
 
 WORKDIR /api
 COPY ./package.json .
